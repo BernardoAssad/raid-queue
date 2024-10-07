@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fila de Treinadores Pokémon</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAADWAFxc/wDj4+MA////ACQkJAAUFBQAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMzREAAAAADM0REREAAADM0RERERAAAM0REREREAAM0REVURERAA0REVEVEREAFVVVGZFVVUAVVVUZkVVVQAXd3VEV3d3ABd3d1V3d3cAB3d3d3d3cAAHd3d3dyJwAAB3d3dyJwAAAAB3dycAAAAAAAAAAAAAD4HwAA4AcAAMADAACAAQAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAACAAQAAwAMAAOAHAAD4HwAA" rel="icon" type="image/x-icon">
+</head>
+<body>
+
+    <h1>Fila de Treinadores Pokémon</h1>
+    <div id="status">Sala aberta. Aguarde mais treinadores.</div>
+    
+    <input type="text" id="nick-input" placeholder="Digite seu nick de treinador">
+    <button id="enter-btn">Entrar na Fila</button>
+    <button id="exit-btn" class="hidden">Sair da Sala</button>
+
+    <div class="pokeball">
+        <div class="pokeball__button"></div>
+    </div>
+
+    <ul id="room-list"></ul>
+    <h3>Fila de Espera</h3>
+    <ul id="waiting-list"></ul>
+
+    <div id="full-room-names" class="hidden">
+        <p id="room-names"></p>
+    </div>     
+
+    <div id="buttons">
+        <button id="show-names-btn" class="hidden">Mostrar Nomes</button>
+        <button id="clear-btn" class="hidden">Limpar Fila</button>
+    </div>  
+
+    <div id="password-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button" id="close-modal">&times;</span>
+            <h2>Insira a Senha de Administrador</h2>
+            <input type="password" id="admin-password-input" placeholder="Senha" />
+            <button id="submit-password">Enviar</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

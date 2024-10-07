@@ -1,0 +1,264 @@
+body {
+    background-color: #0B192C;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin-top: 50px;
+    color: #3b4cca;
+}
+h1 {
+    font-size: 30px;
+    color: #ffcb05;
+    text-shadow: 3px 3px #3b4cca;
+}
+#status {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #3b4cca;
+}
+#nick-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #3b4cca;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+}
+#enter-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #faca1c;
+    border: none;
+    border-radius: 10px;
+    color: #3b4cca;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+#enter-btn:hover {
+    background-color: #f8b915;
+}
+#exit-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ffcb05;
+    border: none;
+    border-radius: 10px;
+    color: #3b4cca;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+#exit-btn:hover {
+    background-color: #f8b915;
+}
+#room-list {
+    margin-top: 30px;
+    list-style-type: none;
+    padding: 0;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto; 
+}
+#room-list li {
+    background-color: #16325B;
+    color: #FEEFAD;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+#waiting-list {
+    margin-top: 30px;
+    list-style-type: none;
+    padding: 0;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#waiting-list li {
+    background-color: #16325B;
+    color: #FEEFAD;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+.pokeball {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background: linear-gradient(to bottom, #ff0000 50%, #fff 50%);
+    border: 3px solid black;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 3s linear infinite;
+    top: 20px;
+}
+.pokeball:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: black;
+    transform: translateY(-50%);
+}
+.pokeball__button {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pokeball__button:before {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+#full-room-names {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ffcb05;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.hidden {
+    display: none;
+}
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 20px;
+    margin-top: 20px;
+}
+#clear-btn {
+    padding: 10px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    display: inline-block;
+    margin-top: 5px;
+}
+#clear-btn:hover {
+    background-color: #cc0000;
+}
+#show-names-btn {
+    padding: 9.5px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3b4cca;
+    border: none;
+    border-radius: 10px;
+    color: #ffcb05;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+#show-names-btn:hover {
+    background-color: #2130a3;
+}
+h3 {
+    color: #ffcb05;
+    text-shadow: 3px 3px #3b4cca;
+}
+
+@media (max-width: 386px) {
+    #enter-btn {
+        width: 250px;
+        font-size: 18px;
+    }
+    
+    .pokeball {
+        display: block;
+        margin: 10px auto;
+    }
+
+    #submit-password {
+        margin-top: 7px;
+    }
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 600px;
+    text-align: center;
+}
+
+.close-button {
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content input {
+    padding: 7px 20px;
+    border-radius: 5px;
+}
+
+#submit-password {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3b4cca;
+    border: none;
+    border-radius: 10px;
+    color: #ffcb05;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+#submit-password:hover {
+    background-color: #2130a3;
+}
